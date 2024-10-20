@@ -45,6 +45,7 @@ jobs:
       run: npm run test:ui
 
   deploy-to-production:
+    needs: execute-ui-test
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to production
